@@ -1,0 +1,71 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face{
+  font-family: anzo;
+  src: url(./assets/fonts/file.woff2);
+}
+@font-face{
+  font-family: anzo1;
+  src: url(./assets/fonts/file1.woff2);
+}
+@font-face{
+  font-family: anzo2;
+  src: url(./assets/fonts/file2.woff2);
+}
+@font-face{
+  font-family: anzo3;
+  src: url(./assets/fonts/file3.woff2);
+}
+@font-face{
+  font-family: anzo4;
+  src: url(./assets/fonts/file4.woff2);
+}
+@font-face{
+  font-family: special;
+  src: url(./assets/fonts/special-font.woff2);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  
+}
+body{
+  color: aliceblue;
+  background-color: #000;
+}
+
+
+#tasklist::-webkit-scrollbar {
+  width: 0;           /* Hide scrollbar for x-axis (horizontal scrolling) */
+  height: 0;          /* Hide scrollbar height for x-axis */
+  display: none;      /* Completely hides the scrollbar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
