@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useCart } from "../context/CartContext"; // 🛒 Import Cart Context
 
 const Cart = () => {
@@ -35,7 +36,9 @@ const Cart = () => {
               </div>
               {/* 🗑 Remove from Cart Button */}
               <button
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => {removeFromCart(item.id);
+                  toast.error("Item Remove")
+                }}
                 className="absolute bottom-0 left-0 w-full bg-red-600 text-white py-2 opacity-0 group-hover:opacity-100 transition-opacity"
               >
                 Remove from Cart ❌

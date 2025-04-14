@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext"; // 🛒 Import Cart Context
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Product = () => {
   const [data, setData] = useState([]);
@@ -91,6 +94,9 @@ const Product = () => {
           <option value="asc">Low to High</option>
           <option value="desc">High to Low</option>
         </select>
+        <div className=" w-20 text-lg p-3 text-center text-white rounded-2xl bg-gray-500">
+              <Link to="/cart">Cart</Link> 
+        </div>
       </div>
 
       {/* 📦 Product Grid */}
@@ -122,10 +128,12 @@ const Product = () => {
               </div>
               {/* 🛒 Add to Cart Button */}
               <button
-                onClick={() => addToCart(item)}
+                onClick={() => {addToCart(item);
+                  toast.success("Added to Cart 🛒")
+                }}
                 className="absolute bottom-0 left-0 w-full bg-black text-white py-2 opacity-0 group-hover:opacity-100 transition-opacity"
               >
-                <Link to="/cart">Add To Cart</Link>
+                Add To Cart
               </button>
             </div>
           ))
